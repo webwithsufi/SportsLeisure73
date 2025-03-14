@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#main #left {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+
+#left img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 66;
+    object-fit: cover;
+    animation-name: rotate;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
+}
+#left #overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(15, 15, 72);
+    z-index: 9;
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+
+#nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    height: 80px;
+    width: 100%;
+    color: #fff;
+    animation-name: down;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    z-index: 999;
+    animation-delay: 2s;
+}
+
+#nav h1{
+    font-size: 20px;
+    font-family: serif;
+    font-style: italic;
+    z-index: 77;
+}
+
+#nav i {
+    font-size: 20px;
+    z-index: 77;
+}
+
+#left>h1{
+    position: absolute;
+    font-size: 50px;
+    text-align: end;
+    right: 5%;
+    bottom: 5%;
+    color: #fff;
+    font-weight: 800;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    animation-name: up;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    z-index: 77;
+}
+
+
+#right{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background-color: #dadada;
+}
+
+#img1 {
+    position: absolute;
+    height: 170px;
+    width: 160px;
+    left: 33%;
+    animation-name: move;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+#img2 {
+    position: absolute;
+    height: 260px;
+    width: 220px;
+    left: 5%;
+    top: 33%;
+    animation-name: move;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+#img3 {
+    position: absolute;
+    height: 150px;
+    width: 130px;
+    right: 35%;
+    bottom: 2%;
+    animation-name: move;
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+
+#right>h1 {
+    position: absolute;
+    font-size: 40px;
+    right: -10%;
+    top: 35%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: lowercase;
+    transform: rotate(-90deg);
+}
+
+
+
+
+@keyframes move {
+    0%{
+        opacity: 0;
+        transform: translateX(60%);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0%);
+    }
+}
+@keyframes rotate {
+    0%{
+        opacity: 0;
+        transform: rotate(30deg) scale(1.4);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+}
+
+@keyframes up {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform:translate(0) ;
+    }
+}
+@keyframes down {
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform:translate(0) ;
+    }
+}
